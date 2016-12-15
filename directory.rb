@@ -20,4 +20,4 @@ students.each do |student|
   puts student
 end
 # finally, we print the total number of students
-puts "Overall, we have #{student_count} great students"
+puts "Overall, we have #{students_count} great students"
