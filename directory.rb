@@ -28,10 +28,10 @@ def print(students)
 end
 
 # Excercise 2 - Modify your program to only print the students whose name begins with a specific letter.
-def print_students_whose_name_starts_with_n(students)
+def print_students_whose_name_starts_with(students, letter)
   students.each.with_index(1) do |student, index|
     s = student[:name]
-    if s[0] == "n"
+    if s[0] == letter
       puts "\n#{index}: #{student[:name]} #{student[:cohort]} cohort"
     end
   end
@@ -45,5 +45,6 @@ end
 students = input_students
 print_header
 #print(students)
-print_students_whose_name_starts_with_n(students)
+letter_to_search = "n"
+print_students_whose_name_starts_with(students, letter_to_search)
 print_footer(students)
