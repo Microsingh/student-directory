@@ -41,10 +41,25 @@ def print_footer(students)
   puts "\nOverall, we have #{students.count} great students"
 end
 
+# Modify your program to only print the students whose name is shorter than 12 characters.
+def print_student_whose_name_is_shorter_than(students, number)
+  puts "\nThis is a list if students whose name is shorter than #{number} characters long"
+  students.each.with_index(1) do |student, index|
+    s = student[:name]
+    if s.length < number
+      puts "#{index}: #{student[:name]}"
+    end
+  end
+end
+
 # nothing happens until we call the methods
 students = input_students
 print_header
 #print(students)
 letter_to_search = "n"
-print_students_whose_name_starts_with(students, letter_to_search)
+#print_students_whose_name_starts_with(students, letter_to_search)
+
+number_to_search = 12
+print_student_whose_name_is_shorter_than(students, number_to_search)
+
 print_footer(students)
