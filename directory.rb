@@ -27,6 +27,16 @@ def print(students)
   end
 end
 
+# Excercise 2 - Modify your program to only print the students whose name begins with a specific letter.
+def print_students_whose_name_starts_with_n(students)
+  students.each.with_index(1) do |student, index|
+    s = student[:name]
+    if s[0] == "n"
+      puts "\n#{index}: #{student[:name]} #{student[:cohort]} cohort"
+    end
+  end
+end
+
 def print_footer(students)
   puts "\nOverall, we have #{students.count} great students"
 end
@@ -34,5 +44,6 @@ end
 # nothing happens until we call the methods
 students = input_students
 print_header
-print(students)
+#print(students)
+print_students_whose_name_starts_with_n(students)
 print_footer(students)
